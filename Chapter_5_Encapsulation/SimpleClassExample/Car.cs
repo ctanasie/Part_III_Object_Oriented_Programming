@@ -12,6 +12,13 @@ namespace SimpleClassExample
         public string petName;
         public int currSpeed;
 
+        // A custom default constructor.
+        public Car()
+        {
+            petName = "Chuck";
+            currSpeed = 10;
+        }
+
         // The functionality of the car.
         public void PrintState()
         {
