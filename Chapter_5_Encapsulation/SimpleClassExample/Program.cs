@@ -12,11 +12,17 @@ namespace SimpleClassExample
         {
             Console.WriteLine("***** Fun with Class Types *****\n");
 
-            // Invoking the default constructor.
+            // Make a car called Chuck going 10 MPH.
             Car chuck = new Car();
-
-            // Prints "Chuck is going 10 MPH".
             chuck.PrintState();
+
+            // Make a car called Mary going 0 MPH.
+            Car mary = new Car("Mary");
+            mary.PrintState();
+
+            // Make a car called Daisy going 75 MPH.
+            Car daisy = new Car("Daisy", 75);
+            daisy.PrintState();
 
             // Allocate and configure a Car object.
             Car myCar = new Car();
