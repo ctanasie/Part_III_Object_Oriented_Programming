@@ -12,6 +12,9 @@ namespace SimpleClassExample
         {
             Console.WriteLine("***** Fun with Class Types *****\n");
 
+            Motorcycle mc = new Motorcycle();
+            mc.PopAWheely();
+
             // Make a car called Chuck going 10 MPH.
             Car chuck = new Car();
             chuck.PrintState();
