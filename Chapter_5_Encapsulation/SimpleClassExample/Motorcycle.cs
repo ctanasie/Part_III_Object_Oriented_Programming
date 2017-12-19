@@ -9,9 +9,8 @@ namespace SimpleClassExample
     class Motorcycle
     {
         public int driverIntensity;
-
-        // New members to represent the name of the driver.
         public string driverName;
+
         public void SetDriverName(string name)
         {
             // These two statements are functionally the same.
@@ -27,13 +26,25 @@ namespace SimpleClassExample
             }
         }
 
-        // Put back the default constructor, which will set all data members to default values.
+        // Constructor chaining.
         public Motorcycle() { }
 
-        // Our custom constructor.
-        public Motorcycle(int intensity)
+        public Motorcycle(int intensity) 
+            : this (intensity, "") { }
+
+        public Motorcycle(string name)
+            : this (0, name) { }
+
+        // This is the 'master' constructor that does all the real work.
+        public Motorcycle(int intensity, string name)
         {
+            if (intensity > 10)
+            {
+                intensity = 10;
+            }
+
             driverIntensity = intensity;
+            driverName = name;
         }
     }
 }
