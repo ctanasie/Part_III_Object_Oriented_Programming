@@ -18,6 +18,10 @@ namespace SimpleClassExample
             c.PopAWheely();
 
             Console.WriteLine($"Rider name is {c.driverName}");
+            Console.WriteLine();
+
+            MakeSomeBikes();
+            Console.WriteLine();
 
             // Make a car called Chuck going 10 MPH.
             Car chuck = new Car();
@@ -44,6 +48,21 @@ namespace SimpleClassExample
             }
 
             Console.ReadLine();
+        }
+
+        static void MakeSomeBikes()
+        {
+            // driverName = "", driverIntensity = 0.
+            Motorcycle m1 = new Motorcycle();
+            Console.WriteLine($"Name = {m1.driverName}, Intensity = {m1.driverIntensity}");
+
+            // driverName = "Tiny", driverIntensity = 0.
+            Motorcycle m2 = new Motorcycle(name:"Tiny");
+            Console.WriteLine($"Name = {m2.driverName}, Intensity = {m2.driverIntensity}");
+
+            // driverName = "", driverIntensity = 7
+            Motorcycle m3 = new Motorcycle(intensity: 7);
+            Console.WriteLine($"Name = {m3.driverName}, Intensity = {m3.driverIntensity}");
         }
     }
 }
