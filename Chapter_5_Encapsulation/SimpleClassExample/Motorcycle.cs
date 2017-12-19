@@ -10,6 +10,15 @@ namespace SimpleClassExample
     {
         public int driverIntensity;
 
+        // New members to represent the name of the driver.
+        public string driverName;
+        public void SetDriverName(string name)
+        {
+            // These two statements are functionally the same.
+            driverName = name;
+            this.driverName = name;
+        }
+
         public void PopAWheely()
         {
             for (int i = 0; i < driverIntensity; i++)
