@@ -27,17 +27,28 @@ namespace SimpleClassExample
         }
 
         // Constructor chaining.
-        public Motorcycle() { }
+        public Motorcycle()
+        {
+            Console.WriteLine("In default ctor.");
+        }
 
         public Motorcycle(int intensity) 
-            : this (intensity, "") { }
+            : this (intensity, "")
+        {
+            Console.WriteLine("In ctor taking an int.");
+        }
 
         public Motorcycle(string name)
-            : this (0, name) { }
+            : this (0, name)
+        {
+            Console.WriteLine("In ctor taking a string.");
+        }
 
         // This is the 'master' constructor that does all the real work.
         public Motorcycle(int intensity, string name)
         {
+            Console.WriteLine("In master ctor.");
+
             if (intensity > 10)
             {
                 intensity = 10;

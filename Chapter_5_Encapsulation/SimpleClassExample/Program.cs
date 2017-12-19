@@ -12,15 +12,12 @@ namespace SimpleClassExample
         {
             Console.WriteLine("***** Fun with Class Types *****\n");
 
-            Motorcycle mc = new Motorcycle();
-            mc.PopAWheely();
-
             // Make a motorcycle with a rider named Tiny?
             Motorcycle c = new Motorcycle(5);
             c.SetDriverName("Tiny");
             c.PopAWheely();
 
-            Console.WriteLine($"Rider name is {c.driverName}"); // Prints an empty name value!
+            Console.WriteLine($"Rider name is {c.driverName}");
 
             // Make a car called Chuck going 10 MPH.
             Car chuck = new Car();
