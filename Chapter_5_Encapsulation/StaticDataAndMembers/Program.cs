@@ -14,7 +14,14 @@ namespace StaticDataAndMembers
 
             SavingsAccount s1 = new SavingsAccount(50);
             SavingsAccount s2 = new SavingsAccount(100);
+
+            // Print the current interest rate.
+            Console.WriteLine($"Interest Rate is: {SavingsAccount.GetInterestRate()}");
+
+            // Make a new object, this does NOT 'reset' the interest rate.
             SavingsAccount s3 = new SavingsAccount(10000.75);
+
+            Console.WriteLine($"Interest rate is: {SavingsAccount.GetInterestRate()}");
 
             Console.ReadLine();
         }

@@ -19,5 +19,16 @@ namespace StaticDataAndMembers
         {
             currBalance = balance;
         }
+
+        // Static members to get/set interest rate.
+        public static void SetInterestRate(double newRate)
+        {
+            currInterestRate = newRate;
+        }
+
+        public static double GetInterestRate()
+        {
+            return currInterestRate;
+        }
     }
 }
